@@ -295,6 +295,7 @@
 
     // Set the collection of resource images
     NSArray *allPngImageNames = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:nil];
+    BOOL foundLaunchImage = NO;
 
     for (NSString *imgName in allPngImageNames){
         
@@ -307,6 +308,8 @@
             // Has image same scale and dimensions as our current device's screen?
             if (img.scale == [UIScreen mainScreen].scale && CGSizeEqualToSize(img.size, [UIScreen mainScreen].bounds.size)) {
                 
+                foundLaunchImage = YES;
+
                 // Don't make the webView opaque
                 self.webView.opaque = NO;
                 
@@ -371,10 +374,13 @@
     }];
     
     // /////////////////
-    
-    NSString* bgColorString = [self.settings cordovaSettingForKey:@"BackgroundColor"];
-    UIColor* bgColor = [self colorFromColorString:bgColorString];
-    [self.webView setBackgroundColor:bgColor];
+    if(!foundLaunchImage) {
+
+        NSString* bgColorString = [self.settings cordovaSettingForKey:@"BackgroundColor"];
+        UIColor* bgColor = [self colorFromColorString:bgColorString];
+        [self.webView setBackgroundColor:bgColor];
+        
+    }
 }
 
 - (void)setLockToken:(NSInteger)lockToken
