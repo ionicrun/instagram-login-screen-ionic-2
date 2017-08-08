@@ -1,26 +1,36 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+## One time setup
 
-## How to use this template
+Since we track some of the platform files, the initial setup requires you to first `remove` the platforms, `add` them again and `reset` (discard) the changes. The necessary steps will be discribed below.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+__Important:__ if want to run the App on the __iOS simulator__, it is best to add the iOS platform in a different way or alternatively update the `ios-sim` package. There currently is a small issue with `cordova-ios@4.4.0`, which could cause an error like `Cannot read property 'replace' of undefined`, when executing the `ionic cordova run ios` command.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+## Step by step
 
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ git clone https://github.com/ionicrun/splash-screen-alternative.git
+$ cd splash-screen-alternative
+```
+Remove both platforms first
+```bash
+$ ionic cordova platform remove android ios
 ```
 
-Then, to run it, cd into `myBlank` and run:
+If any prompts show up, e.g. `[? Looks like a fresh checkout! ... ]`, answer them with `Y` (yes). Next add the platforms again and `reset` (discard) any local changes made during this process.
 
 ```bash
-$ ionic cordova platform add ios
+$ ionic cordova platform add android https://github.com/apache/cordova-ios.git#4.4.0-ios-sim
+
+# alternative: cd platforms/ios/cordova/ && npm install ios-sim&latest
+
+$ git reset --hard
+```
+
+## Done
+
+You're all set! Go ahead and run the App and see the alternative splash screen in action!
+
+```bash
 $ ionic cordova run ios
+# or
+$ ionic cordova run android
 ```
-
-Substitute ios for android if not on a Mac.
-
