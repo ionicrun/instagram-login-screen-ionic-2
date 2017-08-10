@@ -1,3 +1,10 @@
+## Related post: [An Alternative Splash Screen for Ionic 2+](https://www.ionicrun.com/an-alternative-splash-screen-for-ionic-2/)
+
+<p style="text-align:center;">
+  <img src="splash-screen-android-default-vs-alternative.gif" style="width:49%;" title="An alternative splash screen implementation preview for Android">
+  <img src="splash-screen-ios-default-vs-alternative.gif" style="width:49%;" title="An alternative splash screen implementation preview for iOS">
+</p>
+
 ## One time setup
 
 Since we track some of the platform files, the initial setup requires you to first `remove` the platforms, `add` them again and `reset` (discard) the changes. The necessary steps will be discribed below.

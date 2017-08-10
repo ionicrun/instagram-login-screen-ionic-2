@@ -26,50 +26,36 @@ hooks/
 # Platform specific files that need to be tracked.
 # Keep the original platforms/ directory tracked ...
 
-# platforms/
-
-platforms/*
+# Append two ** after platforms/
+platforms/**
 
 # ... with the exception for
 
 # iOS
 # ---
-# CDVViewController.m
-
-# Android
-# -------
-# AndroidManifest.xml
-# themes.xml
-# preview_window.xml
+# platforms/ios/CordovaLib/Classes/Public/CDVViewController.m
 
 # iOS
 !platforms/ios
-platforms/ios/*
-
 !platforms/ios/CordovaLib
-platforms/ios/CordovaLib/*
-
 !platforms/ios/CordovaLib/Classes
-platforms/ios/CordovaLib/Classes/*
-
 !platforms/ios/CordovaLib/Classes/Public
-platforms/ios/CordovaLib/Classes/Public/*
 !platforms/ios/CordovaLib/Classes/Public/CDVViewController.m
 
 # Android
+# -------
+# platforms/android/AndroidManifest.xml
+# platforms/android/res/values/themes.xml
+# platforms/android/res/drawable/preview_window.xml
+
 !platforms/android
-platforms/android/*
 !platforms/android/AndroidManifest.xml
 
 !platforms/android/res
-platforms/android/res/*
-
 !platforms/android/res/values
-platforms/android/res/values/*
 !platforms/android/res/values/themes.xml
 
 !platforms/android/res/drawable
-platforms/android/res/drawable/*
 !platforms/android/res/drawable/preview_window.xml
 
 # End of platform specific files that are tracked.
