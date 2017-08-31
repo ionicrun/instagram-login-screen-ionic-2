@@ -1,8 +1,7 @@
-## Related post: [An Alternative Splash Screen for Ionic 2+](https://www.ionicrun.com/an-alternative-splash-screen-for-ionic-2/)
+## Related post: [Creating an Instagram Login Screen with Ionic 2+](https://www.ionicrun.com/creating-an-instagram-login-screen-with-ionic-2/)
 
 <p align="center">
-  <img src="splash-screen-android-default-vs-alternative.gif" width="49%" title="An alternative splash screen implementation preview for Android">
-  <img src="splash-screen-ios-default-vs-alternative.gif" width="49%" title="An alternative splash screen implementation preview for iOS">
+  <img src="instagram-login-screen-ionic-2.png" title="Creating an Instagram Login Screen with Ionic 2+">
 </p>
 
 ## One time setup
@@ -14,8 +13,8 @@ __Important:__ if want to run the App on the __iOS simulator__, it is best to ad
 ## Step by step
 
 ```bash
-$ git clone https://github.com/ionicrun/splash-screen-alternative.git
-$ cd splash-screen-alternative
+$ git clone https://github.com/ionicrun/instagram-login-screen-ionic-2.git
+$ cd instagram-login-screen-ionic-2
 ```
 Remove both platforms first
 ```bash

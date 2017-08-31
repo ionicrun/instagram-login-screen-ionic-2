@@ -45,7 +45,7 @@ $colors: (
 
 
 /// @prop - Color of the input placeholder
-$text-input-placeholder-color:           #999 !default;
+$text-input-placeholder-color:               color($colors, white-transparent, base) !default;
     
 // App iOS Variables
 // --------------------------------------------------
