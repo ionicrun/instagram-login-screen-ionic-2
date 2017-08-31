@@ -1,3 +1,93 @@
 page-home {
 
+    // align the form horizontally
+    .scroll-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    // make the form adjust to the full width
+    form {
+        width: 100%;
+    }
+  
+    // adds the soothing gradient to the background of the page
+    .content {
+        background: linear-gradient(270deg, rgb(251, 173, 80), rgb(233, 89, 80), rgb(73, 102, 215));    
+        background-size: 1200% 100%;
+       -webkit-animation: MovingBackground 60s ease infinite;
+       -moz-animation: MovingBackground 60s ease infinite;
+       animation: MovingBackground 60s ease infinite;  
+    } 
+
+    // give inputs a light background color
+    .item-ios,
+    .item-md  {
+        background-color: color($colors, white-transparent, base);  
+        color:#fff;
+    }
+
+    // give the footer a white transparent border
+    .footer-ios .toolbar-background-ios {
+        border-color: color($colors, white-transparent, base);  
+    }
+    
+    /** fixes **/      
+    // if a list has a no-line directive, the last item still shows
+    // a bottom border, so hide it
+    .list-md[no-lines] .item-input:last-child {
+        border-width: 0;
+    }    
+
+    // handles the moving part of the background
+    @-webkit-keyframes MovingBackground {
+        0% { background-position: 0% 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0% 50% }
+    }
+
+    @-moz-keyframes MovingBackground {
+        0% { background-position: 0% 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0% 50% }
+    }
+
+    @keyframes MovingBackground { 
+        0% { background-position: 0% 50% }
+        50% { background-position: 100% 50% }
+        100% { background-position: 0% 50% }
+    }
+
+    /** custom, not required **/ 
+    // this class and animation definition are just custom styling, it isn't really required
+    .blink {
+        -webkit-animation: Blink 1.5s linear infinite;
+        -moz-animation: Blink 1.5s linear infinite;
+        animation: Blink 1.5s linear infinite;
+    }
+
+    @-webkit-keyframes Blink {
+        0% { opacity: 1; }
+        49% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 0; } 
+    }
+
+    @-moz-keyframes Blink {
+        0% { opacity: 1; }
+        49% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 0; } 
+    }
+
+    @keyframes Blink { 
+        0% { opacity: 1; }
+        49% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 0; } 
+    }      
+
+
 }

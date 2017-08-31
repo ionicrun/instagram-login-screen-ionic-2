@@ -38,10 +38,15 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  white:      #fff,
+  white-transparent: rgba(255,255,255, 0.2)
 );
 
 
+/// @prop - Color of the input placeholder
+$text-input-placeholder-color:           #999 !default;
+    
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -53,7 +58,14 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+/// @prop - Show the focus highlight when the input has focus
+$text-input-md-show-focus-highlight:        false !default;
 
+/// @prop - Show the valid highlight when it is valid and has a value
+$text-input-md-show-valid-highlight:        $text-input-md-show-focus-highlight !default;
+
+/// @prop - Show the invalid highlight when it is invalid and has value
+$text-input-md-show-invalid-highlight:      $text-input-md-show-focus-highlight !default;
 
 
 // App Windows Variables

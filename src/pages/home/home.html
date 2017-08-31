@@ -1,14 +1,84 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<ion-header no-border>
+  <ion-toolbar transparent
+               text-center>
+
+    <ion-buttons>
+      <button (click)="changeLanguage()"
+              ion-button
+              icon-right
+              color="white">
+                <small>English
+                  <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+                </small>
+      </button>
+    </ion-buttons>
+
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <h3 ion-text
+      color="white"
+      style="margin-bottom:22px;"
+      margin-bottom>
+      <code>$ ionicrun </code><span class="blink">&#9608;</span>
+  </h3>
+
+  <form [formGroup]="loginForm"
+        margin-top
+        novalidate>
+
+    <ion-list no-lines>
+      <ion-item>
+        <ion-input placeholder="Email, phone number or username"
+                   formControlName="email"
+                   type="email"
+                   spellcheck="false"
+                   autocapitalize="off"
+                   required></ion-input>
+      </ion-item>
+      <ion-item margin-top>
+        <ion-input placeholder="Password"
+                   formControlName="password"
+                   type="password"
+                   spellcheck="false"
+                   autocapitalize="off"
+                   required></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <button (click)="login()"
+            [disabled]="!loginForm.valid"
+            color="white"
+            type="button"
+            ion-button
+            block
+            outline
+            margin-bottom>Log In</button>
+
+    <button (click)="recoverPassword()"
+            color="white"
+            type="button"
+            ion-button
+            block
+            clear>
+            <small>Forgot your login details? <strong>Get help signing in.</strong></small></button>
+
+  </form>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="white-transparent"
+               text-center>
+
+    <ion-buttons>
+      <button ion-button
+              color="white">
+              <small>Don't have an account? <strong>Sign up.</strong>
+              </small>
+        </button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>
